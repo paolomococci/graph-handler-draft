@@ -2073,7 +2073,102 @@ Date: Sat, 03 Nov 2018 05:49:08 GMT
 }
 
 ```
-## After which I try with the following command:
+## After which I try with the following command and I get:
 ```
+$ curl -v -i http://127.0.0.1:9090/api/solver/graph/1
+*   Trying 127.0.0.1...
+* TCP_NODELAY set
+* Connected to 127.0.0.1 (127.0.0.1) port 9090 (#0)
+> GET /api/solver/graph/1 HTTP/1.1
+> Host: 127.0.0.1:9090
+> User-Agent: curl/7.59.0
+> Accept: */*
+> 
+< HTTP/1.1 200 
+HTTP/1.1 200 
+< Content-Type: text/plain;charset=UTF-8
+Content-Type: text/plain;charset=UTF-8
+< Content-Length: 1081
+Content-Length: 1081
+< Date: Sat, 03 Nov 2018 05:50:10 GMT
+Date: Sat, 03 Nov 2018 05:50:10 GMT
 
+< 
+[{
+	"max flow" : 9.0
+}],
+[{
+	"vertex previous" : 0,
+	"vertex following" : 1,
+	"flow" : 3.0,
+	"capacity" : 3.0
+}
+, {
+	"vertex previous" : 0,
+	"vertex following" : 2,
+	"flow" : 2.0,
+	"capacity" : 3.0
+}
+, {
+	"vertex previous" : 0,
+	"vertex following" : 3,
+	"flow" : 4.0,
+	"capacity" : 5.0
+}
+, {
+	"vertex previous" : 1,
+	"vertex following" : 4,
+	"flow" : 3.0,
+	"capacity" : 3.0
+}
+, {
+	"vertex previous" : 1,
+	"vertex following" : 3,
+	"flow" : 0.0,
+	"capacity" : 4.0
+}
+, {
+	"vertex previous" : 2,
+	"vertex following" : 5,
+	"flow" : 2.0,
+	"capacity" : 2.0
+}
+, {
+	"vertex previous" : 2,
+	"vertex following" : 3,
+	"flow" : 0.0,
+	"capacity" : 2.0
+}
+, {
+	"vertex previous" : 3,
+	"vertex following" : 4,
+	"flow" : 1.0,
+	"capacity" : 2.0
+}
+, {
+	"vertex previous" : 3,
+	"vertex following" : 5,
+	"flow" : 2.0,
+	"capacity" : 4.0
+}
+, {
+	"vertex previous" : 3,
+	"vertex following" : 6,
+	"flow" : 1.0,
+	"capacity" : 1.0
+}
+, {
+	"vertex previous" : 4,
+	"vertex following" : 6,
+	"flow" : 4.0,
+	"capacity" : 4.0
+}
+, {
+	"vertex previous" : 5,
+	"vertex following" : 6,
+	"flow" : 4.0,
+	"capacity" : 4.0
+}
+* Connection #0 to host 127.0.0.1 left intact
+]
 ```
